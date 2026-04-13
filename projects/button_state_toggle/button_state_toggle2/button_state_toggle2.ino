@@ -1,9 +1,10 @@
 int State = 0;
 int LastButton = HIGH;
 void setup() {
-  pinMode(13 , OUTPUT);
+  pinMode(12 , OUTPUT);
   pinMode(8 , OUTPUT);
   pinMode(2  , INPUT_PULLUP);
+  Serial.begin(9600);
 
 }
 
@@ -19,16 +20,17 @@ void loop() {
 
   switch(State){
     case 0:
-      digitalWrite(13 , LOW);
+      digitalWrite(12 , LOW);
       digitalWrite(8 , LOW);
       break;
     case 1:
-      digitalWrite(13 , HIGH);
+      digitalWrite(12 , HIGH);
       break; 
     case 2:
-      digitalWrite(13 , LOW);
+      digitalWrite(12 , LOW);
       digitalWrite(8 , HIGH);
       break;  
   }
+  Serial.println(CurrentState);
   LastButton = CurrentState;
 }
