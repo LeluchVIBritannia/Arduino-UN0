@@ -2,7 +2,7 @@ int led1 = 13;
 int led2 = 12;
 int led3 = 8;
 
-void startLed(int led1 , int led2 , int led3 , int A);
+void startLed(int l1 , int l2 , int l3 , int A);
 
 void setup() 
 {
@@ -16,28 +16,32 @@ void setup()
   //User Input
   pinMode(2 , INPUT_PULLUP);
   pinMode(4 , INPUT_PULLUP);
+
+  //The start procidure 3 led are truned on this need to be on only once
+  int delayTime = random(100 , 2001);
+  delay(1000);
+  startLed(led1 , led2 , led3 , delayTime);
 }
+  
 
 void loop()
 {
-  int time = random(100 , 2001);
-  startLed(led1 , led2 , led3 , time);
 
 
 }
 
-void startLed(int led1 , int led2 , int led3 , int A)
+void startLed(int l1 , int l2 , int l3 , int A)
 {
-  delay(100);
-  digitalWrite(led1 , HIGH);
-  digitalWrite(led2 , LOW);
-  digitalWrite(led3 , LOW);
+  
+  digitalWrite(l1 , HIGH);
+  digitalWrite(l2 , LOW);
+  digitalWrite(l3 , LOW);
   delay(1000);
-  digitalWrite(led1 , HIGH);
-  digitalWrite(led2 , HIGH);
-  digitalWrite(led3 , LOW);
-  delay(A);
-  digitalWrite(led1 , HIGH);
-  digitalWrite(led2 , HIGH);
-  digitalWrite(led3 , HIGH);
+  digitalWrite(l1 , HIGH);
+  digitalWrite(l2 , HIGH);
+  digitalWrite(l3 , LOW);
+  delay(1000);
+  digitalWrite(l1 , HIGH);
+  digitalWrite(l2 , HIGH);
+  digitalWrite(l3 , HIGH);
 }
