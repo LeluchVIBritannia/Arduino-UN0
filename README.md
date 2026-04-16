@@ -32,3 +32,8 @@ Day 5:
 
 Day 6: Functions & Mini-Project
      Created custom functions for a reaction time game project.
+
+Day 7-8: Uni started dint do anything
+
+Day 9:
+     made a simple reaction game 
