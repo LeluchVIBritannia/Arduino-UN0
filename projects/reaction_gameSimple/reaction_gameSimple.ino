@@ -2,7 +2,7 @@ int startLed = 13;
 int inputPlayer1 = 2;
 int inputPlayer2 = 4;
 int player1Led = 10;
-int player2led = 11;
+int player2Led = 11;
 int state = 0;
 unsigned long startTime;
 int delayTime;
@@ -12,7 +12,7 @@ void setup()
   //LED PIN
   pinMode(startLed , OUTPUT);
   pinMode(player1Led , OUTPUT);
-  pinMode(player2led , OUTPUT);
+  pinMode(player2Led , OUTPUT);
   //Input pins
   pinMode(inputPlayer1 , INPUT_PULLUP);
   pinMode(inputPlayer2  , INPUT_PULLUP);
@@ -25,8 +25,6 @@ void setup()
 
 void loop()
 {
-
-  int player2Led = 10;
 
   if(state == 0)
   {
